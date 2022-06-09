@@ -6,4 +6,10 @@ COPY . .
 
 RUN go build -v -o rocks .
 
-ENTRYPOINT [ "/usr/local/app/rocks" ]
+FROM scratch
+
+WORKDIR /usr/local/app
+
+COPY --from=builder /usr/local/app/rocks /usr/bin/
+
+ENTRYPOINT [ "rocks" ]
