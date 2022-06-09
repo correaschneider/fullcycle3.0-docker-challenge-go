@@ -9,7 +9,7 @@ To run this challange, you will need [Docker](https://docs.docker.com/get-docker
 In your terminal, run this command:
 
 ```shell
-$ docker run --rm --name Code.educationRocks correaschneider/fullcycle-golang:v1.0.0
+$ docker run --rm correaschneider/codeeducation
 ```
 
 > To see more, go to [Docker Hub](https://hub.docker.com/r/correaschneider/fullcycle-golang)
