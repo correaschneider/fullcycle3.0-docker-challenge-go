@@ -4,6 +4,6 @@ WORKDIR /usr/local/app
 
 COPY . .
 
-RUN go build -v -o /usr/local/bin/app ./...
+RUN go build -v -o rocks .
 
-CMD ["go", "run", "."]
+ENTRYPOINT [ "/usr/local/app/rocks" ]
