@@ -1,10 +1,8 @@
 FROM golang:1.17-alpine AS builder
 
-WORKDIR /usr/src/app
+WORKDIR /usr/local/app
 
-RUN go mod init rocks
-
-COPY ./rocks.go .
+COPY . .
 
 RUN go build -v -o /usr/local/bin/app ./...
 
